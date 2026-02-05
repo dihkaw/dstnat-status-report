@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum DST-NAT - XI TJKT 1</title>
+    <style>
+        /* CSS BUILT-IN */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table tr td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        table tr td:first-child {
+            font-weight: bold;
+            color: var(--primary-color);
+            width: 40%;
+        }
+
+        .status-badge {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 5px 15px;
+            background: #2ecc71;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Praktikum DST-NAT</h1>
+        
+        <table>
+            <tr>
+                <td>Nama Kelompok</td>
+                <td id="kelompok">[Masukkan Nama Kelompok]</td>
+            </tr>
+            <tr>
+                <td>Nama Anggota</td>
+                <td id="anggota">[Masukkan Nama Anggota]</td>
+            </tr>
+            <tr>
+                <td>Kelas</td>
+                <td>XI TJKT 1</td>
+            </tr>
+        </table>
+
+        <div class="status-badge" id="server-status">
+            Server IIS Aktif
+        </div>
+    </div>
+
+    <script>
+        // JS BUILT-IN 
+        // Anda bisa menambahkan logika interaktif di sini jika diperlukan
+        console.log("Landing Page Praktikum DST-NAT Loaded Successfully on IIS.");
+        
+        // Contoh fungsi sederhana untuk menyapa di console
+        window.onload = function() {
+            const time = new Date().toLocaleTimeString();
+            document.getElementById('server-status').innerText = "Server IIS Diakses pada: " + time;
+        };
+    </script>
+</body>
+</html>
